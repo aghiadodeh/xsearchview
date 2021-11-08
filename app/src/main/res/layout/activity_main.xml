@@ -22,7 +22,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:search_view_debounce_duration="300"
-                app:search_view_opened="true" />
+                app:search_view_opened="true"
+                app:search_view_icons_color="@color/black"
+                app:search_view_input_color="@color/white"/>
 
         </com.google.android.material.appbar.MaterialToolbar>
 

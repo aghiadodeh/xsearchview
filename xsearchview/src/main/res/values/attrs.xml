@@ -6,6 +6,8 @@
         <attr name="search_view_hide_close_icon" format="boolean" />
         <attr name="search_view_debounce_duration" format="integer" />
         <attr name="search_view_open_on_click" format="boolean" />
+        <attr name="search_view_input_color" format="color" />
+        <attr name="search_view_icons_color" format="color" />
     </declare-styleable>
     <!-- end SearchView attrs -->
 </resources>

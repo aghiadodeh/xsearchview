@@ -8,5 +8,6 @@
     <color name="text_color">#fff</color>
     <color name="light_text">#8C8C8C</color>
     <color name="main_background">#000</color>
+    <color name="search_view_input_background">#4AFFFFFF</color>
 
 </resources>

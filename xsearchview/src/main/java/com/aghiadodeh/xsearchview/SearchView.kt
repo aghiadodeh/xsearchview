@@ -13,12 +13,24 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import androidx.core.content.ContextCompat
 import com.aghiadodeh.xsearchview.databinding.ViewSearchBinding
 import java.util.*
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
+import androidx.core.graphics.drawable.DrawableCompat
+import android.graphics.Color
+
+import android.graphics.drawable.Drawable
+import android.util.Log
+
 
 class SearchView(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
     private var activity: Activity? = null
     private var binding: ViewSearchBinding = ViewSearchBinding.inflate(LayoutInflater.from(context), this, true)
+
+    private var inputColor: Int = ContextCompat.getColor(context, R.color.search_view_input_background)
+    private var iconsColor: Int = ContextCompat.getColor(context, R.color.search_view_icons_background)
 
     companion object {
         private var searchToggleListener: OnSearchToggleListener? = null
@@ -50,6 +62,16 @@ class SearchView(context: Context, attrs: AttributeSet) : FrameLayout(context, a
         }
         array.getBoolean(R.styleable.SearchView_search_view_open_on_click, true).let {
             openOnClick = it
+        }
+        array.getColor(R.styleable.SearchView_search_view_input_color, inputColor).let {
+            inputColor = it
+            binding.searchInputCard.setCardBackgroundColor(inputColor)
+        }
+        array.getColor(R.styleable.SearchView_search_view_icons_color, iconsColor).let {
+            iconsColor = it
+            binding.openSearchButton.setColorFilter(iconsColor, PorterDuff.Mode.SRC_IN)
+            binding.closeSearchButton.setColorFilter(iconsColor, PorterDuff.Mode.SRC_IN)
+            setTextViewDrawableColor(binding.searchInputText)
         }
         array.recycle()
     }
@@ -163,6 +185,16 @@ class SearchView(context: Context, attrs: AttributeSet) : FrameLayout(context, a
                 }
             }, debounceDuration.toLong())
         }
+    }
+
+    private fun setTextViewDrawableColor(textView: EditText) {
+        val drawable: Drawable? = ContextCompat.getDrawable(context, R.drawable.ic_search) //Your drawable image
+        drawable?.let {
+            val d = DrawableCompat.wrap(it)
+            DrawableCompat.setTint(d, iconsColor)
+            DrawableCompat.setTintMode(d, PorterDuff.Mode.SRC_IN)
+        }
+        textView.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null)
     }
 
 

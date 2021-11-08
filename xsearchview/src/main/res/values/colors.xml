@@ -11,6 +11,8 @@
     <color name="rippleColor">#FFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="accent">#9500FF</color>
+    <color name="search_view_input_background">#4A959595</color>
+    <color name="search_view_icons_background">#555555</color>
 
     <!-- ShadowView -->
     <color name="shadow_view_foreground_color_light">#33ffffff</color>

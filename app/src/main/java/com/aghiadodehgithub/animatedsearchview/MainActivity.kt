@@ -45,5 +45,13 @@ class MainActivity : AppCompatActivity() {
         searchView.setOnSearchListener {
             Log.d("SearchListener", it)
         }
+
+        // listen when open/close searchView
+        searchView.initToggleListener {
+            Log.d("initToggleListener", "$it") // true or false
+        }
+
+        // for any edit (styling or set listeners)
+        searchView.getEditText()
     }
 }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="?actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#00000000">
 
     <RelativeLayout
@@ -10,14 +12,15 @@
         android:layout_height="match_parent"
         android:layout_gravity="center">
 
-        <View
+        <ImageView
             android:id="@+id/open_search_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/unit"
-            android:background="@drawable/ic_search" />
+            android:src="@drawable/ic_search"
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 
@@ -30,34 +33,47 @@
         android:background="#00000000"
         android:visibility="invisible">
 
-        <View
+        <ImageView
             android:id="@+id/close_search_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/unit"
-            android:background="@drawable/ic_close" />
+            android:src="@drawable/ic_close"
+            tools:ignore="ContentDescription" />
 
-        <EditText
-            android:id="@+id/search_input_text"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/search_input_card"
             android:layout_width="match_parent"
             android:layout_height="@dimen/button_height"
             android:layout_centerInParent="true"
             android:layout_margin="@dimen/half_padding"
             android:layout_toStartOf="@id/close_search_button"
-            android:background="@drawable/rounded_edit_text"
-            android:drawableStart="@drawable/ic_search"
-            android:drawablePadding="5dp"
-            android:hint="@string/search_hint"
-            android:imeOptions="actionSearch"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:maxLines="1"
-            android:paddingStart="@dimen/unit"
-            android:paddingEnd="@dimen/unit"
-            android:textColorHint="@color/light_text"
-            android:textSize="@dimen/small_text" />
+            app:cardBackgroundColor="@color/search_view_input_background"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp">
+
+            <EditText
+                android:id="@+id/search_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/close_search_button"
+                android:background="#00B54D4D"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="5dp"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="@dimen/unit"
+                android:paddingEnd="@dimen/unit"
+                android:textColorHint="@color/light_text"
+                android:textSize="@dimen/small_text" />
+
+        </com.google.android.material.card.MaterialCardView>
 
     </RelativeLayout>
 

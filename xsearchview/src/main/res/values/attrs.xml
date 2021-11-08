@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- start SearchView attrs -->
+    <declare-styleable name="SearchView">
+        <attr name="search_view_opened" format="boolean" />
+        <attr name="search_view_hide_close_icon" format="boolean" />
+        <attr name="search_view_debounce_duration" format="integer" />
+        <attr name="search_view_open_on_click" format="boolean" />
+    </declare-styleable>
+    <!-- end SearchView attrs -->
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:id="@+id/search_closed_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <View
+            android:id="@+id/open_search_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/unit"
+            android:background="@drawable/ic_search" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_open_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:background="#00000000"
+        android:visibility="invisible">
+
+        <View
+            android:id="@+id/close_search_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/unit"
+            android:background="@drawable/ic_close" />
+
+        <EditText
+            android:id="@+id/search_input_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/half_padding"
+            android:layout_toStartOf="@id/close_search_button"
+            android:background="@drawable/rounded_edit_text"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="5dp"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="@dimen/unit"
+            android:paddingEnd="@dimen/unit"
+            android:textColorHint="@color/light_text"
+            android:textSize="@dimen/small_text" />
+
+    </RelativeLayout>
+
+</FrameLayout>

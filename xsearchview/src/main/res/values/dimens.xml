@@ -1,0 +1,34 @@
+<resources>
+    <dimen name="ef_item_padding">1dp</dimen>
+    <dimen name="ef_padding_small">5dp</dimen>
+    <dimen name="ef_padding_medium">10dp</dimen>
+    <dimen name="ef_spacing_half">4dp</dimen>
+    <dimen name="ef_spacing">8dp</dimen>
+    <dimen name="ef_spacing_double">16dp</dimen>
+    <dimen name="ef_margin_small">5dp</dimen>
+    <dimen name="ef_margin_medium">10dp</dimen>
+    <dimen name="ef_margin_large">15dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="two_units">16dp</dimen>
+    <dimen name="three_units">24dp</dimen>
+    <dimen name="four_units">32dp</dimen>
+    <dimen name="unit">8dp</dimen>
+    <dimen name="unit_and_half">12dp</dimen>
+    <dimen name="editText_height">46dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="btn_height2">45dp</dimen>
+    <dimen name="btn_border_width">0.5dp</dimen>
+    <dimen name="quarter_a_unit">2dp</dimen>
+    <dimen name="small_text">14sp</dimen>
+    <dimen name="medium_text">18sp</dimen>
+    <dimen name="normal_text">16sp</dimen>
+    <dimen name="large_text">24sp</dimen>
+    <dimen name="very_large_text">32sp</dimen>
+    <dimen name="very_very_large_text">36sp</dimen>
+    <dimen name="very_small_text">12sp</dimen>
+    <dimen name="button_height">36dp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="standard_padding">6dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+</resources>

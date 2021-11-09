@@ -17,12 +17,9 @@ import androidx.core.content.ContextCompat
 import com.aghiadodeh.xsearchview.databinding.ViewSearchBinding
 import java.util.*
 import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import androidx.core.graphics.drawable.DrawableCompat
-import android.graphics.Color
 
 import android.graphics.drawable.Drawable
-import android.util.Log
 
 
 class SearchView(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
@@ -30,7 +27,7 @@ class SearchView(context: Context, attrs: AttributeSet) : FrameLayout(context, a
     private var binding: ViewSearchBinding = ViewSearchBinding.inflate(LayoutInflater.from(context), this, true)
 
     private var inputColor: Int = ContextCompat.getColor(context, R.color.search_view_input_background)
-    private var iconsColor: Int = ContextCompat.getColor(context, R.color.search_view_icons_background)
+    private var iconsColor: Int = ContextCompat.getColor(context, R.color.search_view_icons_color)
 
     companion object {
         private var searchToggleListener: OnSearchToggleListener? = null

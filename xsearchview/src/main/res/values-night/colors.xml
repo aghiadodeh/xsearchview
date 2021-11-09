@@ -9,5 +9,5 @@
     <color name="light_text">#8C8C8C</color>
     <color name="main_background">#000</color>
     <color name="search_view_input_background">#4AFFFFFF</color>
-
+    <color name="search_view_icons_color">#C8C8C8</color>
 </resources>

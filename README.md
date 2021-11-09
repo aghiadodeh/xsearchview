@@ -12,10 +12,10 @@ allprojects {
 ```
 and in your app.gradle:
 ``` groovy
-	dependencies {
-			...
-		    implementation 'com.github.aghiadodeh:xsearchview:1.0.3'
-	}
+dependencies {
+	...
+	implementation 'com.github.aghiadodeh:xsearchview:1.0.3'
+}
 ```
 
 
@@ -26,8 +26,8 @@ and in your app.gradle:
 
 ### Usage
                     
-Attribute  | format | Default Value
-------------- | -------------
+Attribute Name | format | Default Value
+------------- | ------------- | -------------
 search_view_opened  | boolean | false
 search_view_hide_close_icon  | boolean  | false
 search_view_debounce_duration  | integer | 200 (ms)

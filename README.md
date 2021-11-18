@@ -34,6 +34,7 @@ search_view_debounce_duration  | integer | 200 (ms)
 search_view_open_on_click  | boolean  | true
 search_view_input_color  | color | #4A959595
 search_view_icons_color  | color  | #555555
+search_view_hint  | string  | Search...
 
 in `your_activity.xml`
 ```xml

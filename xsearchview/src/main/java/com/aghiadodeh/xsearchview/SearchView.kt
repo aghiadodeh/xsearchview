@@ -70,6 +70,9 @@ class SearchView(context: Context, attrs: AttributeSet) : FrameLayout(context, a
             binding.closeSearchButton.setColorFilter(iconsColor, PorterDuff.Mode.SRC_IN)
             setTextViewDrawableColor(binding.searchInputText)
         }
+        array.getString(R.styleable.SearchView_search_view_hint)?.let {
+            binding.searchInputText.hint = it
+        }
         array.recycle()
     }
 

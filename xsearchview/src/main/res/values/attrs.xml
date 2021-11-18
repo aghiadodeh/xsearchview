@@ -8,6 +8,7 @@
         <attr name="search_view_open_on_click" format="boolean" />
         <attr name="search_view_input_color" format="color" />
         <attr name="search_view_icons_color" format="color" />
+        <attr name="search_view_hint" format="string" />
     </declare-styleable>
     <!-- end SearchView attrs -->
 </resources>
